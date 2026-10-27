@@ -51,3 +51,4 @@ footer.site { border-top: 1px solid var(--border); padding: 24px 0 40px; color: 
 footer.site .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 footer.site a { color: var(--muted); }
 code { font: 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--panel); padding: 1px 5px; border-radius: 4px; }
+.price .button { margin-top: 8px; }

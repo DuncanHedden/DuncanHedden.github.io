@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tab Rotator – self-healing dashboard rotation for TVs and wall screens</title>
+  <meta name="description" content="Automatically rotate tabs on TVs and dashboards. Self-healing, schedules, alerts and fleet config for IT teams.">
+  <link rel="icon" href="assets/tab-rotator.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">Hedden Software</a>
+  <nav><a href="tab-rotator.html">Tab Rotator</a><a href="tab-rotator.html#pricing">Pricing</a><a href="index.html#regex-find">Regex Find</a><a href="index.html#contact">Contact</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="hero">
+  <img src="assets/tab-rotator.png" alt="">
+  <div>
+    <h1>The screen on the wall that never needs a human.</h1>
+    <p class="lede">Tab Rotator cycles through your Grafana, Datadog, Power BI, Salesforce or Jira dashboards on any TV or monitor, and fixes them when they break: crashed tabs, failed loads, expired sessions, frozen pages.</p>
+  </div>
+</div>
+<p><a class="button" href="#pricing">See pricing</a> &nbsp; <span class="note">Chrome extension · coming to the Chrome Web Store</span></p>
+
+<h2>Free, and genuinely useful</h2>
+<ul class="features">
+  <li><strong>Rotate tabs or a playlist</strong><span>The tabs in a window, or a list of URLs it opens and keeps open.</span></li>
+  <li><strong>Per-tab timing</strong><span>Each dashboard gets its own duration, with an optional fresh reload just before it's shown.</span></li>
+  <li><strong>Survives everything</strong><span>Sleep, Chrome restarts and clock changes. It picks up where it should be, not where it was.</span></li>
+  <li><strong>Basic self-healing</strong><span>Crashed or failed tabs are skipped and reloaded with backoff; closed playlist tabs reopen.</span></li>
+  <li><strong>Pauses for people</strong><span>Stops while someone uses the keyboard or mouse, and resumes when they walk away.</span></li>
+  <li><strong>Hands-off start</strong><span>Toolbar button, keyboard shortcut, or start automatically when the browser launches.</span></li>
+</ul>
+
+<h2>Pro: for IT teams running many screens</h2>
+<ul class="features">
+  <li><strong>Bad-state detection</strong><span>Signed-out pages, SSO redirects, "502" and "session expired" titles, and pages frozen for N minutes are reloaded, reopened, skipped or alerted on.</span></li>
+  <li><strong>Alerts</strong><span>Slack, Microsoft Teams, Discord or any webhook, when a screen can't fix itself and when it recovers, plus a daily "all OK".</span></li>
+  <li><strong>Fleet config</strong><span>Manage every screen from one JSON file in git. Invalid files are rejected and the last good config stays.</span></li>
+  <li><strong>Display hours</strong><span>Rotate 07:00–18:00 on weekdays; show a black screen, a welcome page or another playlist the rest of the time.</span></li>
+  <li><strong>Health log</strong><span>Every anomaly and recovery, timestamped and exportable as CSV, for "the TV looked weird yesterday".</span></li>
+  <li><strong>Settings lock</strong><span>A PIN on settings and start/stop, so passers-by can't break it.</span></li>
+</ul>
+
+<table class="compare">
+  <tr><th></th><th>Free</th><th>Pro</th></tr>
+  <tr><td>Rotation, playlists, per-tab timing, auto-start</td><td>✓</td><td>✓</td></tr>
+  <tr><td>Crash and load-failure recovery, idle pause</td><td>✓</td><td>✓</td></tr>
+  <tr><td>Bad-state detectors (login, error, frozen)</td><td></td><td>✓</td></tr>
+  <tr><td>Webhook alerts and daily heartbeat</td><td></td><td>✓</td></tr>
+  <tr><td>Fleet config from one file</td><td></td><td>✓</td></tr>
+  <tr><td>Display hours and off-hours content</td><td></td><td>✓</td></tr>
+  <tr><td>Health log with CSV export</td><td>last 20 events</td><td>✓</td></tr>
+  <tr><td>PIN settings lock</td><td></td><td>✓</td></tr>
+</table>
+
+<h2 id="pricing">Pricing</h2>
+<p>Tab Rotator is free. Pro is priced <strong>per screen</strong>: one license key covers as many screens as you buy, and each screen activates it once.</p>
+<div class="prices">
+  <div class="price"><div class="amount">$4</div><div class="per">per screen / month</div><p class="note">Cancel any time.</p></div>
+  <div class="price featured"><div class="amount">$36</div><div class="per">per screen / year</div><p class="note">Two months free versus monthly.</p></div>
+  <div class="price"><div class="amount">$69</div><div class="per">per screen, one-time</div><p class="note">Lifetime license for the current major version and its updates.</p></div>
+</div>
+<p class="note">Prices in USD; sales tax or VAT is added at checkout where applicable. Checkout opens when Tab Rotator is published. To be notified, email <a href="mailto:dmhedden123@gmail.com?subject=Tab%20Rotator%20Pro">dmhedden123@gmail.com</a>.</p>
+
+<h2>How licensing works</h2>
+<ul>
+  <li>After purchase you receive a <strong>license key</strong> by email.</li>
+  <li>Paste it into Tab Rotator's settings on a screen, or put it in your fleet config file, and every screen activates itself.</li>
+  <li>Each screen uses one activation. Retiring a screen? Deactivate it in its settings and the activation moves to another.</li>
+  <li>Screens check the key about twice a day. If your network is down, Pro keeps working for 14 days.</li>
+</ul>
+
+<h2>Privacy</h2>
+<p>No analytics or telemetry, ever. Settings and logs stay on each screen. Tab Rotator only contacts addresses you give it (your config file and your alert webhook) and, for Pro, our license server to check your key. Details: <a href="privacy.html">privacy policy</a>.</p>
+
+<h2>FAQ</h2>
+<h3>Which browsers?</h3>
+<p>Google Chrome and Chromium-based browsers (Edge, Brave) on Windows, macOS, Linux and ChromeOS.</p>
+<h3>Does it work in kiosk mode?</h3>
+<p>Yes. Run Chrome with <code>--kiosk</code> and auto-start, and the screen boots straight into a rotating dashboard.</p>
+<h3>Can I try Pro first?</h3>
+<p>Email us for a trial key. Monthly plans can also be cancelled at any time.</p>
+<h3>Do you offer invoices or purchase orders?</h3>
+<p>Every purchase gets a tax invoice from Lemon Squeezy. For purchase orders or larger fleets, email us.</p>
+</div></main>
+<footer class="site"><div class="wrap">
+  <span>© 2026 Hedden Software · Duncan Hedden · <a href="mailto:dmhedden123@gmail.com">dmhedden123@gmail.com</a></span>
+  <span><a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="privacy.html">Privacy</a></span>
+</div></footer>
+</body>
+</html>
